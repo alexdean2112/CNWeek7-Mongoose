@@ -12,7 +12,7 @@ exports.createTV = async (tvObject) => {
 exports.readTV = async (key, filter) => {
     try {
         if (key) {
-            return await TVshow.findOne({[key]: filter})
+            return await TVshow.find({[key]: filter})
         } else {
             return await TVshow.find({})
         }

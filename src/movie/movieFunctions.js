@@ -12,7 +12,7 @@ exports.createMovie = async (movieObject) => {
 exports.readMovies = async (key, filter) => {
     try {
         if (key) {
-            return await Movie.findOne({[key]: filter})
+            return await Movie.find({[key]: filter})
         } else {
             return await Movie.find({})
         }
